@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Inventory Management Dashboard</h1>
+
+<div class="cards">
+    <div class="card">Total Products: <span id="total"></span></div>
+    <div class="card">Low Stock: <span id="low"></span></div>
+</div>
+
+<h2>Product List</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Supplier</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
