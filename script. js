@@ -1,0 +1,26 @@
+let products = [
+    { name: "Laptop", qty: 10, supplier: "Dell" },
+    { name: "Mouse", qty: 3, supplier: "HP" },
+    { name: "Keyboard", qty: 15, supplier: "Lenovo" },
+    { name: "Monitor", qty: 2, supplier: "Samsung" }
+];
+
+let total = products.length;
+let low = products.filter(p => p.qty < 5).length;
+
+document.getElementById("total").innerText = total;
+document.getElementById("low").innerText = low;
+
+let table = document.getElementById("table-body");
+
+products.forEach(p => {
+    let row = `
+        <tr>
+            <td>${p.name}</td>
+            <td>${p.qty}</td>
+            <td>${p.supplier}</td>
+            <td>${p.qty < 5 ? "Low Stock" : "Available"}</td>
+        </tr>
+    `;
+    table.innerHTML += row;
+});
